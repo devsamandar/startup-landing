@@ -1,5 +1,7 @@
 import React from "react";
 import Title from "../../components/Title";
+import pricingData from "../../data/pricing.data";
+import PricingCard from "../../components/PricingCard";
 
 function Pricing() {
   return (
@@ -37,144 +39,9 @@ function Pricing() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="text-center divide-y-2">
-                  <td className="p-3 text-start border-b">
-                    <p>Landing pages</p>
-                  </td>
-                  <td className="p-3">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                </tr>
-                <tr className="text-center divide-y">
-                  <td className="p-3 text-start border-b">
-                    <p>Drag-and-drop editor</p>
-                  </td>
-                  <td className="p-3" />
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                </tr>
-                <tr className="text-center divide-y">
-                  <td className="p-3 text-start border-b">
-                    <p>Email marketing</p>
-                  </td>
-                  <td className="p-3">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                </tr>
-                <tr className="text-center divide-y">
-                  <td className="p-3 text-start border-b">
-                    <p>Ad retargeting</p>
-                  </td>
-                  <td className="p-3">
-                    <span className="text-xs inline-flex bg-primary text-white rounded-full py-1 px-3">
-                      Add-on Available
-                    </span>
-                  </td>
-                  <td className="p-3 border-s" />
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                </tr>
-                <tr className="text-center divide-y">
-                  <td className="p-3 text-start border-b">
-                    <p>Messenger integration</p>
-                  </td>
-                  <td className="p-3" />
-                  <td className="p-3 border-s" />
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                </tr>
-                <tr className="text-center divide-y">
-                  <td className="p-3 text-start border-b">
-                    <p>Live chat</p>
-                  </td>
-                  <td className="p-3" />
-                  <td className="p-3 border-s">
-                    <span className="text-xs inline-flex bg-primary text-white rounded-full py-1 px-3">
-                      Add-on Available
-                    </span>
-                  </td>
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                </tr>
-                <tr className="text-center divide-y">
-                  <td className="p-3 text-start border-b">
-                    <p>Conversational bots</p>
-                  </td>
-                  <td className="p-3" />
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                </tr>
-                <tr className="text-center divide-y">
-                  <td className="p-3 text-start border-b">
-                    <p>SEO recommendations &amp; optimizations</p>
-                  </td>
-                  <td className="p-3" />
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                  <td className="p-3 border-s">
-                    <span>
-                      <i className="fa-solid fa-check text-green-500" />
-                    </span>
-                  </td>
-                </tr>
-                <tr className="divide-y">
-                  <td />
-                  <td />
-                  <td />
-                  <td />
-                </tr>
+                {pricingData.map((item, index) => (
+                  <PricingCard item={item} key={index} />
+                ))}
               </tbody>
             </table>
           </div>

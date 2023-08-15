@@ -2,7 +2,7 @@ import React from "react";
 
 function Clients() {
   return (
-    <section className="xl:py-24 py-16">
+    <section className="xl:py-24 py-16" id="clients">
       <div className="container" data-aos="fade-up" data-aos-duration={1000}>
         <div className="text-center">
           <div>
